@@ -23,48 +23,62 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/radio_button_male"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:enabled="true"
             android:text="Male" />
 
         <RadioButton
+            android:id="@+id/radio_button_female"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Female" />
     </RadioGroup>
 
     <EditText
+        android:id="@+id/edit_text_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Age"
         android:inputType="number" />
 
-    <EditText
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Feet"
-        android:inputType="number" />
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/edit_text_feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Feet"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edit_text_inches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Inches"
+            android:inputType="number" />
+    </LinearLayout>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Inches"
-        android:inputType="number" />
-
-    <EditText
+        android:id="@+id/edit_text_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Weight(Kg)"
         android:inputType="number" />
 
     <Button
+        android:id="@+id/button_calculate"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:text="Calculate" />
 
     <TextView
+        android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
