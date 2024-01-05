@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
-//
+
 //public class MainActivity extends AppCompatActivity {
 //
 //    private TextView resultText;
@@ -132,16 +132,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inchesToMeter);
+        setContentView(R.layout.inches_to_meter);
         findViews();
-        calculateButton.setOnClickListener(new View.onClickListener() {
+        calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
                 String inchesString = inchesEditText.getText().toString();
-                if(inchesString.isEmpty()){
+                if (inchesString.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter inches.", Toast.LENGTH_SHORT).show();
-                }else{
-                    
+                } else {
+                    double meter = Integer.parseInt(inchesString) * 0.0254;
+                    DecimalFormat deciFor = new DecimalFormat("0.000");
+                    String formattedMeter = deciFor.format(meter);
+                    resultTextView.setText("You inches in mtere is " + formattedMeter);
                 }
             }
         });

@@ -28,5 +28,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Your height is 1.8 meter" />
+        android:text="Click on button" />
 </LinearLayout>
